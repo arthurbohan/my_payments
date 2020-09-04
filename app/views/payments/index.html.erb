@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Payments</h1>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr>
+      <th colspan="20"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <tbody>
+    <% @payments.each do |payment| %>
+      <tr>
+        <tr>
+          <th>Id</th><th>Amount</th><th>Currency</th><th>Purpose</th>
+          <th>Create time</th><th>Approve time</th><th>Execute time</th>
+          <th>Decline time</th>
+        </tr>
+        <tr>
+        <td><%= payment.id %></td>
+        <td><%= payment.amount_in_cents %></td>
+        <td><%= payment.currency %></td>
+        <td><%= payment.purpose %></td>
+        <td><%= payment.created_at %></td>
+        <td><%= payment.approved_at %></td>
+        <td><%= payment.executed_at %></td>
+        <td><%= payment.declined_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
