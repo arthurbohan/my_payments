@@ -13,8 +13,10 @@ ActiveAdmin.register Payment do
   end
 
   action_item :approve, only: :show do
-    link_to "Approve", approved_admin_payment_path(payment),
-     method: :put if !payment.approved_at?
+    if current_admin_user != payment.owner
+      link_to "Approve", approved_admin_payment_path(payment),
+      method: :put if !payment.approved_at?
+    end
   end
 
   action_item :executed, only: :show do

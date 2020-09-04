@@ -8,6 +8,7 @@ class PaymentsController < ApplicationController
 
   def create
     @payment = Payment.create(payment_params)
+    @payment.owner = current_admin_user.id
     @payment.save
   end
 
@@ -42,6 +43,6 @@ class PaymentsController < ApplicationController
   def payment_params
     params.require(:quiz).permit(:account_id, :amount_in_cents,
     :currency, :purpose, :created_at, :approved_at, :executed_at,
-    :declined_at, :user_id)
+    :declined_at, :owner, :user_id)
   end
 end
