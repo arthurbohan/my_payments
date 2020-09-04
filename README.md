@@ -1,24 +1,18 @@
-# README
+# About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What u should do if u was started localhost:
+1. Authorize as user
+2. At second tab authorize as admin with this params email:
+admin@example.com and password: password.
+3. As admin u can create, approve, execute, decline payments.
+4. As user u can see ur payments.
 
-Things you may want to cover:
+#Stack
 
-* Ruby version
+* Ruby 2.7.0
+* Rails 6.0.3
 
-* System dependencies
+#Gems
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Devise
+* Active admin
