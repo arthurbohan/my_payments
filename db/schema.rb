@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_03_234526) do
+ActiveRecord::Schema.define(version: 2020_09_04_104416) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_09_03_234526) do
     t.datetime "declined_at"
     t.integer "user_id", null: false
     t.string "purpose"
+    t.integer "owner"
     t.index ["user_id"], name: "index_payments_on_user_id"
   end
 
